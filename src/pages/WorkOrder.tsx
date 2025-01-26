@@ -9,50 +9,6 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-// Mock Data with enhanced BOM details
-const projects = [
-    { id: 1, name: "Website Redesign", captial: 50000, status: "In Progress" },
-    { id: 2, name: "Mobile App Development", captial: 75000, status: "Planning" },
-    { id: 3, name: "Cloud Migration", captial: 100000, status: "Completed" }
-];
-
-const initialWorkOrders = [
-    {
-        id: 1,
-        projectId: 1,
-        name: "Website Redesign - Main Project",
-        status: "In Progress",
-        totalBomCost: 2500,
-        bomItems: [
-            { id: 1, name: "Design Software License", price: 2000, vendor: "Adobe" },
-            { id: 2, name: "Hosting Services", price: 500, vendor: "AWS" }
-        ],
-        subWorkOrders: [
-            {
-                id: 2,
-                name: "Frontend Development",
-                status: "In Progress",
-                totalBomCost: 4500,
-                bomItems: [
-                    { id: 3, name: "React Component Library", price: 1500, vendor: "Syncfusion" },
-                    { id: 4, name: "Design System", price: 3000, vendor: "UX Toolkit" }
-                ],
-                subWorkOrders: [
-                    {
-                        id: 4,
-                        name: "Mobile Responsive Design",
-                        status: "Completed",
-                        totalBomCost: 1000,
-                        bomItems: [
-                            { id: 5, name: "Responsive Framework", price: 1000, vendor: "Tailwind CSS" }
-                        ],
-                        subWorkOrders: []
-                    }
-                ]
-            }
-        ]
-    }
-];
 
 // Utility Functions
 const getStatusColor = (status) => {
@@ -132,25 +88,38 @@ const WorkOrderCard = ({ workOrder, depth = 0 }) => {
 
 const WorkOrdersPage = () => {
     useEffect(() => {
-        axios.get('http://localhost:8000/dashboard/projects')
-            .then(response => {
-                console.log(response.data);
-                setProjects(response.data);
-                setSelectedProject(response.data[0]);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the projects!', error);
-            });
-    }, []);
-    useEffect(() => {
-        axios.get('http://localhost:8000/dashboard/workorders')
-            .then(response => {
-                console.log(response.data);
-                setWorkOrders(response.data);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the projects!', error);
-            });
+        const fetchProjects = () => {
+            axios.get('http://localhost:8000/dashboard/projects')
+                .then(response => {
+                    console.log(response.data);
+                    setProjects(response.data);
+                    setSelectedProject(response.data[0]);
+                })
+                .catch(error => {
+                    console.error('There was an error fetching the projects!', error);
+                });
+        };
+
+        const fetchWorkOrders = () => {
+            axios.get('http://localhost:8000/dashboard/workorders')
+                .then(response => {
+                    console.log(response.data);
+                    setWorkOrders(response.data);
+                })
+                .catch(error => {
+                    console.error('There was an error fetching the work orders!', error);
+                });
+        };
+
+        fetchProjects();
+        fetchWorkOrders();
+
+        const interval = setInterval(() => {
+            fetchProjects();
+            fetchWorkOrders();
+        }, 1000);
+
+        return () => clearInterval(interval);
     }, []);
 
     const [projects, setProjects] = useState([{
