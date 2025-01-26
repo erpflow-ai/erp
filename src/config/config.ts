@@ -1,0 +1,1 @@
+export const plugin_url = "http://localhost:5174"

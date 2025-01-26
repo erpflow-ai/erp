@@ -15,15 +15,15 @@ export default function Header() {
             />
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <button className="relative p-2 rounded-full hover:bg-gray-100">
             <Bell className="h-6 w-6" />
             <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
           </button>
-          
+
           <div className="flex items-center gap-3">
-            <span className="font-medium">John Doe</span>
+            <span className="font-medium">Akshay</span>
             <button className="p-1 rounded-full bg-gray-100">
               <User className="h-6 w-6" />
             </button>

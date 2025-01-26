@@ -1,0 +1,84 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Website Redesign",
+            "budget": 50000,
+            "status": "In Progress"
+        },
+        {
+            "id": 2,
+            "name": "Mobile App Development",
+            "budget": 75000,
+            "status": "Planning"
+        },
+        {
+            "id": 3,
+            "name": "Cloud Migration",
+            "budget": 100000,
+            "status": "Completed"
+        }
+    ],
+    "initialWorkOrders": [
+        {
+            "id": 1,
+            "projectId": 1,
+            "name": "Website Redesign - Main Project",
+            "status": "In Progress",
+            "totalBomCost": 2500,
+            "bomItems": [
+                {
+                    "id": 1,
+                    "name": "Design Software License",
+                    "price": 2000,
+                    "vendor": "Adobe"
+                },
+                {
+                    "id": 2,
+                    "name": "Hosting Services",
+                    "price": 500,
+                    "vendor": "AWS"
+                }
+            ],
+            "subWorkOrders": [
+                {
+                    "id": 2,
+                    "name": "Frontend Development",
+                    "status": "In Progress",
+                    "totalBomCost": 4500,
+                    "bomItems": [
+                        {
+                            "id": 3,
+                            "name": "React Component Library",
+                            "price": 1500,
+                            "vendor": "Syncfusion"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Design System",
+                            "price": 3000,
+                            "vendor": "UX Toolkit"
+                        }
+                    ],
+                    "subWorkOrders": [
+                        {
+                            "id": 4,
+                            "name": "Mobile Responsive Design",
+                            "status": "Completed",
+                            "totalBomCost": 1000,
+                            "bomItems": [
+                                {
+                                    "id": 5,
+                                    "name": "Responsive Framework",
+                                    "price": 1000,
+                                    "vendor": "Tailwind CSS"
+                                }
+                            ],
+                            "subWorkOrders": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

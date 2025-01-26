@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "projectName": "Brahmaputra Bridge Project",
+        "projectType": "Bridge Construction",
+        "materials": [
+            {
+                "id": 101,
+                "name": "High-Strength Structural Steel",
+                "vendor": "National Infrastructure Suppliers",
+                "specifications": "Grade 50 Reinforced Steel",
+                "quantity": 500,
+                "unit": "Metric Tons",
+                "unitPrice": 75000,
+                "totalValue": 37500000,
+                "status": "Approved",
+                "assignedSection": "Main Bridge Span",
+                "technicalDetails": [
+                    {
+                        "name": "Tensile Strength",
+                        "value": "500 MPa"
+                    },
+                    {
+                        "name": "Corrosion Resistance",
+                        "value": "High"
+                    }
+                ]
+            },
+            {
+                "id": 102,
+                "name": "Advanced Concrete Mix",
+                "vendor": "Mega Civil Engineering Providers",
+                "specifications": "High-Performance Waterproof Concrete",
+                "quantity": 2000,
+                "unit": "Cubic Meters",
+                "unitPrice": 25000,
+                "totalValue": 50000000,
+                "status": "Pending Approval",
+                "assignedSection": "Foundation and Pillars",
+                "technicalDetails": [
+                    {
+                        "name": "Compressive Strength",
+                        "value": "65 MPa"
+                    },
+                    {
+                        "name": "Water Absorption",
+                        "value": "<0.5%"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "projectName": "Himalayan Dam Development",
+        "projectType": "Hydroelectric Dam",
+        "materials": [
+            {
+                "id": 201,
+                "name": "Seismic-Resistant Cement",
+                "vendor": "Civil Construction Enterprises",
+                "specifications": "Earthquake Zone Compliant Cement",
+                "quantity": 1500,
+                "unit": "Metric Tons",
+                "unitPrice": 50000,
+                "totalValue": 75000000,
+                "status": "In Procurement",
+                "assignedSection": "Dam Foundation",
+                "technicalDetails": [
+                    {
+                        "name": "Seismic Performance",
+                        "value": "Zone V Compliant"
+                    },
+                    {
+                        "name": "Setting Time",
+                        "value": "Initial 30 mins, Final 600 mins"
+                    }
+                ]
+            }
+        ]
+    }
+]

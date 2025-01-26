@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Website Redesign",
+        "capital": 50000,
+        "duration": "3 months",
+        "status": "In Progress",
+        "inventoryStatus": "Partially Stocked",
+        "customer": "Acme Corporation"
+    },
+    {
+        "id": 2,
+        "name": "Mobile App Development",
+        "capital": 75000,
+        "duration": "6 months",
+        "status": "Planning",
+        "inventoryStatus": "Not Started",
+        "customer": "Tech Innovations Inc."
+    },
+    {
+        "id": 3,
+        "name": "Cloud Migration",
+        "capital": 100000,
+        "duration": "4 months",
+        "status": "Completed",
+        "inventoryStatus": "Fully Stocked",
+        "customer": "Global Enterprises"
+    }
+]
