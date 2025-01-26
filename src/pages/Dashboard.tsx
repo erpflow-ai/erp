@@ -58,19 +58,26 @@ const getInventoryColor = (status) => {
 };
 
 const ProjectManagementPage = () => {
-  useEffect(() => {
-    axios.get('http://localhost:8000/dashboard/projects')
-      .then(response => {
-        console.log(response.data);
-        setProjects(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the projects!', error);
-      });
-  }, []);
-
   const [projects, setProjects] = useState(initialProjects);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchProjects = () => {
+      axios.get('http://localhost:8000/dashboard/projects')
+        .then(response => {
+          console.log(response.data);
+          setProjects(response.data);
+        })
+        .catch(error => {
+          console.error('There was an error fetching the projects!', error);
+        });
+    };
+
+    fetchProjects();
+    const intervalId = setInterval(fetchProjects, 1000); // Poll every 5 seconds
+
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  }, []);
 
   // Handler for deleting a project
   const handleDeleteProject = (id) => {
