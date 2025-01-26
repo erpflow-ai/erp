@@ -149,7 +149,7 @@ const MaterialCard = ({ material }) => {
             <div className="flex justify-between items-center">
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-blue-600 hover:text-blue-800 flex items-center"
+                    className="text-[#EE3136] hover:text-[#ec595e] flex items-center"
                 >
                     {isExpanded ? "Hide" : "View"} Technical Details
                 </button>
@@ -186,7 +186,7 @@ const ConstructionMaterialsPage = () => {
                     <div className="col-span-3 bg-white border rounded-lg p-4">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-xl font-bold">Infrastructure Projects</h2>
-                            <button className="text-blue-500 hover:text-blue-700">
+                            <button className="text-[#EE3136] hover:text-[#f65f64]">
                                 <PlusCircle />
                             </button>
                         </div>

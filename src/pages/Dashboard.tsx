@@ -87,7 +87,7 @@ const ProjectManagementPage = () => {
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-xl font-semibold text-gray-800">Ongoing Projects</h2>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          <button className="bg-[#EE3136] text-white px-4 py-2 rounded hover:bg-[#fb555a]"
             onClick={toggleModal}
           >
             + Add New Project

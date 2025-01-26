@@ -181,7 +181,7 @@ const WorkOrdersPage = () => {
                     <div className="col-span-3 bg-white border rounded-lg p-4">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-xl font-bold">Projects</h2>
-                            <button className="text-blue-500 hover:text-blue-700">
+                            <button className="text-[#EE3136] hover:text-[#f05b60]">
                                 <PlusCircle />
                             </button>
                         </div>

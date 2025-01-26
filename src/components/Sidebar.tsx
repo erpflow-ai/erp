@@ -7,22 +7,22 @@ import {
   LayoutDashboard,
   Settings
 } from 'lucide-react';
+import aurigo_logo from '../assets/aurigo_logo.webp';
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
   { icon: ClipboardList, label: 'Work Orders', path: '/workorder' },
   { icon: Package, label: 'Materials', path: '/materials' },
-  { icon: Calendar, label: 'Events', path: '/events' },
+  { icon: Calendar, label: 'Stages', path: '/stages' },
   { icon: Users, label: 'Vendors', path: '/vendors' },
   { icon: Settings, label: 'Settings', path: '/settings' },
 ];
 
 export default function Sidebar() {
   return (
-    <div className="h-screen w-64 bg-gray-900 text-white p-4 ">
+    <div className="h-screen min-w-64 w-64 bg-[#1c1c1c] text-white p-4 ">
       <div className="flex items-center gap-2 mb-8">
-        <Package className="h-8 w-8 text-blue-400" />
-        <h1 className="text-xl font-bold">BlueERP</h1>
+        <img src={aurigo_logo} className='h-[60px] w-auto' alt="aurigo-logo" />
       </div>
 
       <nav>
